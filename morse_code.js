@@ -25,14 +25,18 @@ export const toMorseCode = {
   "w": ".--",
   "x": "-..-",
   "y": "-.--",
-  "z": "--.."
+  "z": "--..",
+  " ": " "
 }
 
-export const translate = (letter) =>{
+// Function to translate alphabet letter to morse code
+export const translateLetter = (letter) =>{
   return toMorseCode[letter];
 }
 
+// export const translateWord = (word)=>{
 
+// }
 
 
 

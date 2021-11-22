@@ -1,42 +1,51 @@
-import {translate, toMorseCode} from "./morse_code.js";
+import {translateLetter, toMorseCode} from "./morse_code.js";
 import {expect, it, describe} from "@jest/globals";
 
-// a .-
-// b -- 
 
-// describe - have to import
+// Test for letters
 describe("Translate single letters to morse", () =>{
-  it("it should translate 'a' to '.-", () =>{
-    const result = translate("a");
+  it("it should translate 'a' to '.-'", () =>{
+    const result = translateLetter("a");
     expect(result).toBe(".-");
   })
-  it("it should translate 'b' to '-...", () =>{
-    const result = translate("b");
+  it("it should translate 'b' to '-...'", () =>{
+    const result = translateLetter("b");
     expect(result).toBe("-...");
   })
-  it("it should translate 'c' to '-.-.", () =>{
-    const result = translate("c");
+  it("it should translate 'c' to '-.-.'", () =>{
+    const result = translateLetter("c");
     expect(result).toBe("-.-.");
   })
-  it("it should translate 'd' to '--..", () =>{
-    const result = translate("d");
+  it("it should translate 'd' to '--..'", () =>{
+    const result = translateLetter("d");
     expect(result).toBe("-..");
   })
-  it("it should translate 'e' to '.", () =>{
-    const result = translate("e");
+  it("it should translate 'e' to '.'", () =>{
+    const result = translateLetter("e");
     expect(result).toBe(".");
   })
-  it("it should translate 'f' to '..-.", () =>{
-    const result = translate("f");
+  it("it should translate 'f' to '..-.'", () =>{
+    const result = translateLetter("f");
     expect(result).toBe("..-.");
+  })
+    it("it should translate ' ' to ' '", () =>{
+    const result = translateLetter(" ");
+    expect(result).toBe(" ");
   })
 
 }) 
 
 // it should translate a to .-
 // it should translate b to --
-// it should translate hello to ??
 
+// it should translate hello to ??
+// describe("Translate a word to morse", () =>{
+//   it("it should translate 'hello' to '.-'", () =>{
+//     const result = translate("a");
+//     expect(result).toBe(".-");
+//   })
+
+// })
 
 // it should translate ! to unavailable
 // it should translate . to ??
