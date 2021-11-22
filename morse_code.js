@@ -37,7 +37,11 @@ export const translateLetter = (letter) =>{
 // Function to translate word to morse code
 // split the word to letters first
 // translate every letter to morse code and rejoin
-
+export const translateWord = (word)=>{
+  let splitWord = word.split("")
+  let translatedWord = splitWord.map(translateLetter).join(" ");
+  return translatedWord;
+}
 
 
 
