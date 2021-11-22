@@ -30,7 +30,7 @@ describe("Translate single letters to morse", () =>{
   })
     it("it should translate ' ' to ' '", () =>{
     const result = translateLetter(" ");
-    expect(result).toBe(" ");
+    expect(result).toBe("");
   })
 
 }) 
@@ -47,6 +47,19 @@ describe("Translate a word to morse", () =>{
   it("it should translate 'hello' to '.... . .-.. .-.. ---'", () =>{
     const result = translateWord("hello");
     expect(result).toBe(".... . .-.. .-.. ---");
+  })
+
+})
+
+// it should translate sentence 
+describe("Translate a sentence to morse", () =>{
+  it("it should translate 'i like cat' to '.. .-.. .. -.- . -.-. .- -'", () =>{
+    const result = translateSentence("i like cat");
+    expect(result).toBe(".. .-.. .. -.- . -.-. .- -");
+  })
+  it("it should translate 'hello cat' to '.... . .-.. .-.. --- -.-. .- -'", () =>{
+    const result = translateWord("hello cat");
+    expect(result).toBe(".... . .-.. .-.. --- -.-. .- -");
   })
 
 })
