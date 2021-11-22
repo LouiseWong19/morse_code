@@ -1,0 +1,24 @@
+@import "./assets/styles/_typography.scss";
+@import "./assets/styles/_variables.scss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+header{
+  text-align: center;
+  height: 100px;
+  h1{
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+.translator{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

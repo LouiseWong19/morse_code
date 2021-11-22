@@ -1,4 +1,9 @@
 // Start off with a Morse Code dictionary
+let input = document.querySelector("#translator__english");
+let output = document.querySelector("#translator__morse_code");
+let translateBtn = document.querySelector("#translator__btn");
+
+
 export const toMorseCode = {
   "a": ".-",
   "b": "-...",
@@ -51,6 +56,12 @@ export const translateSentence = (sentence)=>{
   let translatedSentence = splitsentence.map(translateWord).join(" ");
   return translatedSentence;
 }
+
+
+
+
+
+
 
 
 

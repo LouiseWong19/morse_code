@@ -61,6 +61,10 @@ describe("Translate a sentence to morse", () =>{
     const result = translateSentence("hello cat");
     expect(result).toBe(".... . .-.. .-.. --- -.-. .- -");
   })
+  it("it should translate 'cross the no mans land' to '-.-. .-. --- ... ... - .... . -. --- -- .- -. ... .-.. .- -. -..'", () =>{
+    const result = translateSentence("cross the no mans land");
+    expect(result).toBe("-.-. .-. --- ... ... - .... . -. --- -- .- -. ... .-.. .- -. -..");
+  })
 
 })
 
