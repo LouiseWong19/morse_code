@@ -3,6 +3,8 @@ import {expect, it, describe} from "@jest/globals";
 
 
 // Test for letters
+// it should translate a to .-
+// it should translate b to --
 describe("Translate single letters to morse", () =>{
   it("it should translate 'a' to '.-'", () =>{
     const result = translateLetter("a");
@@ -35,9 +37,6 @@ describe("Translate single letters to morse", () =>{
 
 }) 
 
-// it should translate a to .-
-// it should translate b to --
-
 // it should translate hello to ??
 describe("Translate a word to morse", () =>{
   it("it should translate 'an' to '.- -.'", () =>{
@@ -69,5 +68,13 @@ describe("Translate a sentence to morse", () =>{
 })
 
 // it should translate ! to unavailable
-// it should translate . to ??
-// it should translate space to ??
+describe("Translate unknown characters to '/'", () =>{
+  it("it should translate '!' to '/'", () =>{
+    const result = translateLetter("!");
+    expect(result).toBe("/");
+  })
+  it("it should translate '?' to '/'", () =>{
+    const result = translateLetter("?");
+    expect(result).toBe("/");
+  })
+})

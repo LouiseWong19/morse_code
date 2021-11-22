@@ -31,7 +31,9 @@ export const toMorseCode = {
   "x": "-..-",
   "y": "-.--",
   "z": "--..",
-  " ": " "
+  " ": " ",
+  "!": "/",
+  "?": "/"
 }
 
 // Function to translate alphabet letter to morse code
@@ -60,7 +62,7 @@ export const translateSentence = (sentence)=>{
 // Accept input
 const translation = () =>{
   let translated = translateSentence(input.value);
-  output.innerHTML = translated
+  output.innerHTML = translated;
 }
 
 translateBtn.addEventListener("click",translation);

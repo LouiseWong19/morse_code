@@ -34,5 +34,6 @@ A `translator__btn` has been added in between the input and output display. `tra
 ### Features to add
 - numbers translation
 - response to unknown characters
+- consider upper case letter
 
 ## Known Bug
