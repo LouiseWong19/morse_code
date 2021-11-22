@@ -1,13 +1,14 @@
 body {
-  background-color: #E2DCBA;
+  background-image: url("background.jpg");
+  background-size: cover;
   color: #1B2021;
 }
 
 input, div {
-  height: 150px;
-  width: 250px;
+  height: 20vh;
+  width: 80vw;
   border: 1px solid black;
-  margin: 10px 0;
+  margin: 20px 0;
   background-color: #E9E5DD;
 }
 
@@ -31,4 +32,10 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.translator #translator__english {
+  text-align: center;
+}
+.translator #translator__morse_code {
+  text-align: center;
 }
