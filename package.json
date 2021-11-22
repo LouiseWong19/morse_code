@@ -1,0 +1,25 @@
+{
+  "name": "morse_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "morse_code.js",
+  "scripts": {
+    "test": "jest ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LouiseWong19/morse_code.git"
+  },
+  "author": "Louise Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LouiseWong19/morse_code/issues"
+  },
+  "homepage": "https://github.com/LouiseWong19/morse_code#readme",
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.3.1"
+  }
+}
