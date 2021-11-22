@@ -57,6 +57,13 @@ export const translateSentence = (sentence)=>{
   return translatedSentence;
 }
 
+const translation = () =>{
+  let translated = translateSentence(input.value);
+  output.innerHTML = translated
+}
+console.log();
+
+translateBtn.addEventListener("click",translation);
 
 
 
