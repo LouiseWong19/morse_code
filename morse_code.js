@@ -34,9 +34,10 @@ export const translateLetter = (letter) =>{
   return toMorseCode[letter];
 }
 
-// export const translateWord = (word)=>{
+// Function to translate word to morse code
+// split the word to letters first
+// translate every letter to morse code and rejoin
 
-// }
 
 
 

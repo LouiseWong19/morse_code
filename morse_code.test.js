@@ -1,4 +1,4 @@
-import {translateLetter, toMorseCode} from "./morse_code.js";
+import {translateLetter, toMorseCode, translateWord} from "./morse_code.js";
 import {expect, it, describe} from "@jest/globals";
 
 
@@ -39,13 +39,17 @@ describe("Translate single letters to morse", () =>{
 // it should translate b to --
 
 // it should translate hello to ??
-// describe("Translate a word to morse", () =>{
-//   it("it should translate 'hello' to '.-'", () =>{
-//     const result = translate("a");
-//     expect(result).toBe(".-");
-//   })
+describe("Translate a word to morse", () =>{
+  it("it should translate 'an' to '.- -.'", () =>{
+    const result = translateWord("an");
+    expect(result).toBe(".- -.");
+  })
+  it("it should translate 'hello' to '.... . .-.. .-.. ---'", () =>{
+    const result = translateWord("hello");
+    expect(result).toBe(".... . .-.. .-.. ---");
+  })
 
-// })
+})
 
 // it should translate ! to unavailable
 // it should translate . to ??
