@@ -43,6 +43,15 @@ export const translateWord = (word)=>{
   return translatedWord;
 }
 
+// Function to translate sentence to morse code
+// split sentence to word
+// use translateWord function to translate word
+export const translateSentence = (sentence)=>{
+  let splitsentence = sentence.split(" ");
+  let translatedSentence = splitsentence.map(translateWord).join(" ");
+  return translatedSentence;
+}
+
 
 
 

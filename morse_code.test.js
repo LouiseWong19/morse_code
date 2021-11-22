@@ -1,4 +1,4 @@
-import {translateLetter, toMorseCode, translateWord} from "./morse_code.js";
+import {translateLetter, toMorseCode, translateWord, translateSentence} from "./morse_code.js";
 import {expect, it, describe} from "@jest/globals";
 
 
@@ -30,7 +30,7 @@ describe("Translate single letters to morse", () =>{
   })
     it("it should translate ' ' to ' '", () =>{
     const result = translateLetter(" ");
-    expect(result).toBe("");
+    expect(result).toBe(" ");
   })
 
 }) 
@@ -58,7 +58,7 @@ describe("Translate a sentence to morse", () =>{
     expect(result).toBe(".. .-.. .. -.- . -.-. .- -");
   })
   it("it should translate 'hello cat' to '.... . .-.. .-.. --- -.-. .- -'", () =>{
-    const result = translateWord("hello cat");
+    const result = translateSentence("hello cat");
     expect(result).toBe(".... . .-.. .-.. --- -.-. .- -");
   })
 
