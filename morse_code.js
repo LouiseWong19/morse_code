@@ -3,7 +3,7 @@ let input = document.querySelector("#translator__english");
 let output = document.querySelector("#translator__morse_code");
 let translateBtn = document.querySelector("#translator__btn");
 
-
+// Translate English to Morse Code
 export const toMorseCode = {
   "a": ".-",
   "b": "-...",
@@ -61,11 +61,45 @@ export const translateSentence = (sentence)=>{
 
 // Accept input
 const translation = () =>{
+  input.value = input.value.toLowerCase();
   let translated = translateSentence(input.value);
   output.innerHTML = translated;
 }
 
 translateBtn.addEventListener("click",translation);
+
+/*************************************************************************/
+// Translate Morse Code to English
+// Build a morse code to english 
+export const toEnglish = {
+  ".-": "a",
+  "-...": "b",
+  "-.-.": "c",
+  "-..": "d",
+  ".": "e",
+  "..-.": "f",
+  "--.": "g",
+  "....": "h",
+  "..": "i",
+  ".---": "j",
+  "-.-": "k",
+  ".-..": "l",
+  "--": "m",
+  "-.": "n",
+  "---": "o",
+  ".--.": "p",
+  "--.-": "q",
+  ".-.": "r",
+  "...": "s",
+  "-": "t",
+  "..-": "u",
+  "...-": "v",
+  ".--": "w",
+  "-..-": "x",
+  "-.--": "y",
+  "--..": "z",
+  " ": " "
+}
 
 
 
