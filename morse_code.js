@@ -1,7 +1,7 @@
-// Start off with a Morse Code dictionary
-let input = document.querySelector("#translator__english");
-let output = document.querySelector("#translator__morse_code");
-let translateBtn = document.querySelector("#translator__btn");
+// // Start off with a Morse Code dictionary
+// let input = document.querySelector("#translator__english");
+// let output = document.querySelector("#translator__morse_code");
+// let translateBtn = document.querySelector("#translator__btn");
 
 // Translate English to Morse Code
 export const toMorseCode = {
@@ -31,7 +31,7 @@ export const toMorseCode = {
   "x": "-..-",
   "y": "-.--",
   "z": "--..",
-  " ": " ",
+  " ": "/",
   "!": "/",
   "?": "/"
 }
@@ -59,14 +59,14 @@ export const translateSentence = (sentence)=>{
   return translatedSentence;
 }
 
-// Accept input
-const translation = () =>{
-  input.value = input.value.toLowerCase();
-  let translated = translateSentence(input.value);
-  output.innerHTML = translated;
-}
+// // Accept input
+// const translation = () =>{
+//   input.value = input.value.toLowerCase();
+//   let translated = translateSentence(input.value);
+//   output.innerHTML = translated;
+// }
 
-translateBtn.addEventListener("click",translation);
+// translateBtn.addEventListener("click",translation);
 
 /*************************************************************************/
 // Translate Morse Code to English
@@ -98,7 +98,11 @@ export const toEnglish = {
   "-..-": "x",
   "-.--": "y",
   "--..": "z",
-  " ": " "
+  "/": " "
+}
+
+export const translateMorseCodeLetter = (code) =>{
+  return toEnglish[code];
 }
 
 
