@@ -78,3 +78,16 @@ describe("Translate unknown characters to '/'", () =>{
     expect(result).toBe("/");
   })
 })
+
+// it should translate Morse code to english 
+// it should translate ".-" to "a"
+describe("Translate single letters to morse", () =>{
+  it("it should translate '.-' to 'a'", () =>{
+    const result = translateMorseCodeLetter(".-");
+    expect(result).toBe("a");
+  })
+  it("it should translate '-...' to 'b'", () =>{
+    const result = translateMorseCodeLetter("-...");
+    expect(result).toBe("b");
+  })
+})
