@@ -1,7 +1,7 @@
-// // Start off with a Morse Code dictionary
-// let input = document.querySelector("#translator__english");
-// let output = document.querySelector("#translator__morse_code");
-// let translateBtn = document.querySelector("#translator__btn");
+// Start off with a Morse Code dictionary
+let input = document.querySelector(".translator__english");
+let output = document.querySelector(".translator__morse_code");
+let translateBtn = document.querySelector(".translator__btn");
 
 // Translate English to Morse Code
 export const toMorseCode = {
@@ -38,7 +38,7 @@ export const toMorseCode = {
 
 // Function to translate alphabet letter to morse code
 export const translateLetter = (letter) =>{
-  return toMorseCode[letter];
+  return toMorseCode[letter] || toEnglish[letter];
 }
 
 // Function to translate word to morse code
@@ -59,14 +59,14 @@ export const translateSentence = (sentence)=>{
   return translatedSentence;
 }
 
-// // Accept input
-// const translation = () =>{
-//   input.value = input.value.toLowerCase();
-//   let translated = translateSentence(input.value);
-//   output.innerHTML = translated;
-// }
+// Accept input
+const translation = () =>{
+  input.value = input.value.toLowerCase();
+  let translated = translateSentence(input.value);
+  output.innerHTML = translated;
+}
 
-// translateBtn.addEventListener("click",translation);
+translateBtn.addEventListener("click",translation);
 
 /*************************************************************************/
 // Translate Morse Code to English
@@ -101,12 +101,9 @@ export const toEnglish = {
   "/": " "
 }
 
-export const translateMorseCodeLetter = (code) =>{
-  return toEnglish[code];
-}
-
-
-
+// export const translateMorseCodeLetter = (code) =>{
+//   return toEnglish[code];
+// }
 
 
 

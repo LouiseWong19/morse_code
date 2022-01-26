@@ -27,14 +27,18 @@ header{
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  #translator__english{
+  &__english{
     text-align: center;
+    color: $secondary-color;
   }
-  #translator__btn{
+  &__btn{
     padding: 10px;
     border-radius: 10px;
   }
-  #translator__morse_code{
-    text-align: center;
+  &__morse_code{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary-color;
   }
 }

@@ -1,16 +1,15 @@
 @import "./_variables.scss";
 
 body{
-  background-image: url("background.jpg");
-  background-size: cover;
+  background-color: $background-color;
   color: $primary-color;
 }
 
 input,div{
   height: 20vh;
   width: 80vw;
-  border: 2px solid black;
+  border: 2px solid $primary-color;
   border-radius: 10px;
   margin: 20px 0;
-  background-color: $secondary-color;
+  background-color: $background-color;
 }
